@@ -16,11 +16,12 @@
         <!--bootstrap 4 css-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
-        <!--js code-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-
         <!--icon style link-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+        
+        <!--jquery cdn-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     </head>
     <body>
         <!--navigation bar start-->
@@ -30,8 +31,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#my-services">My Services</a></li>
                 <li><a href="#my-team">My Team</a></li>
-                <li><a href="#listings">Listings</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact-me">Contact</a></li>
             </ul>
         </nav>
         
@@ -45,7 +45,7 @@
 
         <!--about section start-->
         <section class="about" id="about">
-            <h1 class="title">About Me</h1>
+            <h1 class="title">About me</h1>
             <div class="about-content">
                 <div class="column-left">
                     <img src="" alt="">
@@ -60,9 +60,14 @@
             </div>
         </section>
 
+        <!--gallery section start-->
+        <section class="gallery" id="gallery">
+            <div class="gallery-content"></div>
+        </section>
+
         <!--my services section start-->
         <section class="my-services" id="my-services">
-            <h1 class="title">My Services</h1>
+            <h1 class="title">My services</h1>
             <h2 class="sub-title">Experience You Can Trust</h2>
             <div class="services-content">
                 <div class="card">
@@ -93,21 +98,55 @@
 
         <!--my team section start-->
         <section class="my-team" id="my-team">
-            <h1 class="title">My Team</h1>
+            <h1 class="title">My team</h1>
             <div class="team-content">
-                <div class="text">Lifestyle has put together a diverse team of individuals with a shared passion for real estate.
+                <div class="text">
+                    Lifestyle has put together a diverse team of individuals with a shared passion for real estate.
                     We believe that everyone deserves to be a home owner and are here to make the experience seamless, 
-                    gratifying and most of all exciting for you. Real estate is a lifestyle, make it yours.</div>
-                
+                    gratifying and most of all exciting for you. Real estate is a lifestyle, make it yours.
+                </div>
                 <div class="links">
                     <i class="fab fa-facebook-square"></i>
                     <i class="fab fa-instagram-square"></i>
                 </div>
-
-                <!--ADD THE "VISIT" BUTTON-->
+                <a href="#">Visit</a>  
+            </div>
+        </section>
+        
+        <!--contant me section start-->
+        <section class="contact-me" id="contact-me">
+            <h1 class="title">Contact me</h1>
+            <div class="contact-content">
+                <h2 class="sub-title">Email: jmetelka66@gmail.com / Tel: +1 (305) 879-4649</h2>
+                <form action="#">
+                    <div class="fields">
+                        <div class="field name">
+                            <input type="text" name="" id="" placeholder="Name" required>
+                        </div>
+                        <div class="field email">
+                            <input type="email" name="" id="" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="field textarea">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Message.." required></textarea>
+                    </div>
+                    <div class="button-area">
+                        <button type="submit">SEND</button>
+                    </div>
+                </form>
             </div>
         </section>
 
+        <!--footer start-->
+        <footer>
+            <div class="links">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+            <span>Created by <a href="mailto:yauhenikh7@gmail.com">Yauheni Khvashcheuski</a> &#169; 2021</span>
+        </footer>
         
+        <script src="./scripts/script.js"></script>
+
     </body>
 </html>

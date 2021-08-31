@@ -15,8 +15,8 @@ Content:
     -My services(description of all the services offered by the agent)
     -Gallery(decorative element)
     -My team(introduction of the brokerage who the agent works with)
-    -Listings(recent or featured listings offered by the brokerage)
-    -Testimonials(reviews about the brokerage and the agent)
+    *Listings(recent or featured listings offered by the brokerage)
+    *Testimonials(reviews about the brokerage and the agent)
     -Contact me(social links and email-submission form)
     -Footer(copyright and the author of the website)
 
@@ -25,3 +25,12 @@ Content:
 
     What I've learnt when was working on the project:
         -...
+
+Developement process:
+
+    1. Define the structure of the page;
+    2. Create the sketch of the page; <- we are here
+    3. Style the page based on the skectch;
+    4. Animate the page;
+    5. Host the website.
+
