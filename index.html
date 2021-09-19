@@ -11,10 +11,7 @@
         <!--google fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-
-        <!--bootstrap 4 css-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;   300&display=swap" rel="stylesheet">
 
         <!--icon style link-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
@@ -24,124 +21,122 @@
 
     </head>
     <body>
+
         <!--navigation bar start-->
-        <nav>
-            <ul class="navbar">
+        <nav class="navbar">
+            <ul class="menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#my-services">My Services</a></li>
-                <li><a href="#my-team">My Team</a></li>
-                <li><a href="#contact-me">Contact</a></li>
-            </ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>    
         </nav>
         
         <!--home section start-->
         <section class="home" id="home">
             <div class="home-content">
-                <h1>Diana Banchero</h1>
-                <h2>Real Estate Agent</h2>
+                <div class="text-1">Diana Banchero</div>
+                <div class="text-2">Real Estate Agent</div>
             </div>     
         </section>
 
         <!--about section start-->
         <section class="about" id="about">
             <h1 class="title">About me</h1>
-            <div class="about-content">
-                <div class="column-left">
-                    <img src="" alt="">
+                <div class="about-content">
+                    <div class="column-left">
+                        <img src="./images/about.jpg" alt="">
+                    </div>
+                    <div class="column-right">
+                        <p>With unparalleled industry knowledge, experience, and local expertise, 
+                           I'm the South Florida Real Estate expert you've been looking for. Whether you're buying,
+                           selling,  or looking for a new place to rent I can help you get the best deal.
+                        </p>
+                    </div>
                 </div>
-                <div class="column-right">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                       Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                       Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
-            </div>
         </section>
 
         <!--gallery section start-->
         <section class="gallery" id="gallery">
-            <div class="gallery-content"></div>
+            <div class="gallery-content">
+                <img src="./images/gallery_1.jpg" alt="">
+                <div class="text-2">Embrace</div>
+                <div class="text-1">Your Passion</div>
+            </div>
         </section>
 
         <!--my services section start-->
-        <section class="my-services" id="my-services">
+        <section class="services" id="services">
             <h1 class="title">My services</h1>
-            <h2 class="sub-title">Experience You Can Trust</h2>
-            <div class="services-content">
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-search"></i>                        
-                        <div class="text">Rental Search</div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <h2 class="sub-title">Experience You Can Trust</h2>
+                <div class="services-content">
+                    <div class="card">
+                        <div class="box">
+                            <img src="./images/search.png" alt="">
+                            <div class="text-2">Rental Search</div>
+                            <p>Assistance finding and moving to a new home.</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="box">
+                            <img src="./images/buy_and_sell.png" alt="">
+                            <div class="text-2">Buying & Selling</div>
+                            <p>Assistance buying a property, also assistance marketing and selling a property.</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="box">
+                            <img src="./images/consultation.png" alt="">
+                            <div class="text-2">Free Consultation</div>
+                            <p>Answering all question and giving a personalized and professional opinion.</p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-handshake"></i>
-                        <div class="text">Buying & Selling</div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-comments"></i>
-                        <div class="text">Free Consultation</div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!--my team section start-->
-        <section class="my-team" id="my-team">
-            <h1 class="title">My team</h1>
-            <div class="team-content">
-                <div class="text">
-                    Lifestyle has put together a diverse team of individuals with a shared passion for real estate.
-                    We believe that everyone deserves to be a home owner and are here to make the experience seamless, 
-                    gratifying and most of all exciting for you. Real estate is a lifestyle, make it yours.
-                </div>
-                <div class="links">
-                    <i class="fab fa-facebook-square"></i>
-                    <i class="fab fa-instagram-square"></i>
-                </div>
-                <a href="#">Visit</a>  
-            </div>
         </section>
         
         <!--contant me section start-->
-        <section class="contact-me" id="contact-me">
+        <section class="contact" id="contact">
             <h1 class="title">Contact me</h1>
-            <div class="contact-content">
-                <h2 class="sub-title">Email: jmetelka66@gmail.com / Tel: +1 (305) 879-4649</h2>
-                <form action="#">
-                    <div class="fields">
-                        <div class="field name">
-                            <input type="text" name="" id="" placeholder="Name" required>
+                <div class="contact-content">
+                    <h2 class="sub-title">Email: jmetelka66@gmail.com / Tel: +1 (305) 879-4649</h2>
+                    <form action="#">
+                        <div class="fields">
+                            <div class="field first_name">
+                                <label for="first_name">First Name</label>
+                                <input type="text" name="first_name" id="" placeholder="" required>
+                            </div>
+                            <div class="field last_name">
+                                <label for="last_name">Last Name</label>
+                                <input type="text" name="last_name" id="" placeholder="" required>
+                            </div>
+                            <div class="field email">
+                                <label for="email">Email*</label>
+                                <input type="email" name="email" id="" placeholder="Email" required>
+                            </div>
                         </div>
-                        <div class="field email">
-                            <input type="email" name="" id="" placeholder="Email" required>
+                        <div class="field textarea">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="" cols="30" rows="10" placeholder="" required></textarea>
                         </div>
-                    </div>
-                    <div class="field textarea">
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Message.." required></textarea>
-                    </div>
-                    <div class="button-area">
-                        <button type="submit">SEND</button>
-                    </div>
-                </form>
-            </div>
+                        <div class="button-area">
+                            <button type="submit">SEND</button>
+                        </div>
+                    </form>
+                </div>
+            
         </section>
 
         <!--footer start-->
         <footer>
             <div class="links">
-                <i class="fab fa-facebook"></i>
-                <i class="fab fa-instagram"></i>
+                <a href="">
+                    <img src="images/facebook.png" alt="">
+                </a>
+                <a href="">
+                    <img src="images/instagram.png" alt="">
+                </a>
             </div>
             <span>Created by <a href="mailto:yauhenikh7@gmail.com">Yauheni Khvashcheuski</a> &#169; 2021</span>
         </footer>
