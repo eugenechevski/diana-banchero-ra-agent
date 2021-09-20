@@ -18,6 +18,75 @@ html{
     font-family: 'Roboto', sans-serif;
 }
 
+/* Style the custom scroll-up button */
+
+.scroll-up{
+    position: fixed;
+    height: 30px;
+    width: 30px;
+    bottom: 10px;
+    right: 30px;
+    text-align: center;
+    z-index: 9999;
+    background-color: black;
+    color: white;
+    line-height: 30px;
+    font-size: 20px;
+    border: 1px solid white;
+    border-radius: 6px;
+    cursor: pointer;
+    pointer-events: none;
+    transition: all 1s ease;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.scroll-up.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Styling titles and sub-titles */
+
+section .title{
+    position: relative;
+    width: 100%;
+    height: 5%;
+    top: 15px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    margin: 0;
+}
+
+section .sub-title{
+    position: relative;
+    width: 100%;
+    height: 5%;
+    text-align: center;
+    top: 20px;
+    font-size: 20px;
+    font-weight: 200;
+    margin: 0;
+}
+
+/* Style the headings and sub-headings */
+
+.text-1{
+    width: 30%;
+    text-align: center;
+    font-size: 48px;
+}
+
+.text-2{
+    width: 20%;
+    text-align: center;
+    font-size: 28px;
+    font-weight: lighter;
+}
+
+
 /* Styling the navigation bar */
 
 .navbar{
@@ -26,14 +95,17 @@ html{
     align-items: center;
     width: 100%;
     height: 75px;
+    z-index: 999;
     position: fixed;
-    padding-right: 50   px;
+    padding-right: 50px;
     margin: 0;
     transition: all 1s ease;
 }
 
 .navbar.sticky{
     background-color: black;
+    padding: 0 30px;
+    height: 80px;
 }
 
 .menu{
@@ -54,7 +126,7 @@ html{
     font-size: large;
     color: black;
     text-decoration: none;
-    transition: color 0.3 ease;
+    transition: color 1s ease;
 }
 
 .menu li a:hover{
@@ -63,15 +135,17 @@ html{
 
 .navbar.sticky .menu li a{
     color: white;
+    transition: color 0.5s ease;
 }
 
 .navbar.sticky .menu li a:hover{
-    color: gray;
+    color: #777777 !important;
 }
 
-/* FIX: THE COLOR DOESN'T CHANGE WHEN SCROLLING */
 .navbar.sticky .menu li a.active{
-    color: darkgray !important;
+    color: #bfbfbf;
+    text-shadow: 0.5px 0.5px 10px white;
+    transition: color 0.5s ease;
 }
 
 /* Styling the home section */
@@ -85,28 +159,114 @@ html{
 .home-content{
     width: 100%;
     height: 100%;
+    text-align: center;
 }
 
 .home-content .text-1{
-    width: 30%;
-    text-align: center;
-    font-size: 48px;
     transform: translate(200px, 350px);
 }
 
 .home-content .text-2{
-    width: 20%;
-    text-align: center;
-    font-size: 28px;
-    font-weight: lighter;
     transform: translate(270px, 350px);
 }
 
 /* Styling the about section */
 
+.about{
+    width: 100%;
+    height: 700px;
+}
+
+.about-content{
+    display: flex; 
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    height: 90%;
+    padding: 80px;
+}
+
+.about-content .column-left{
+    height: 450px;
+    box-shadow: -5px 5px 5px gray;
+    padding: 0;
+    margin: 0;
+}
+
+.about-content .column-left img{
+    width: 475px;
+    height: 450px;
+    transition: all 1s ease;
+}
+
+.about-content .column-left img:hover{
+    box-shadow: -5px 5px 5px black;
+}
+
+.about-content .column-right{
+    margin-left: 50px;
+    height: 200px;
+    align-self: center;
+}
+
+.about-content .column-right p{
+    font-size: 33px;
+    text-align: justify;
+}
 
 /* Styling the gallery section */
 
+.gallery::before{
+    content: "";
+    position: absolute;
+    transform: translateY(-100px);
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    z-index: 1;
+}
+
+.gallery{
+    width: 100%;
+    height: 550px;
+    margin-top: 100px;
+    background-image: url('../images/gallery_1.jpg');
+    background-size: cover;
+    transition: all 1s ease;
+}
+
+.gallery-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid red;
+}
+
+.gallery-content .text-1{
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    letter-spacing: 10px;
+    text-shadow: 1px 1px 1px black;
+    transition: all 1s ease;
+}
+
+.gallery-content .text-2{
+    color: white;
+    font-size: 30px;
+    text-shadow: 1px 1px 1px black;
+    transition: all 1s ease;
+}
+
+.gallery-content i:first{
+}
+
+.gallery-content:last-child{
+    
+}
 
 /* Styling the services section */
 
