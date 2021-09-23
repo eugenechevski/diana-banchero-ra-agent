@@ -1,3 +1,10 @@
+/* 
+    TODO:
+        1. Fix the scroll y-coodridinates;
+        2. Form validation;
+*/
+
+
 $(document).ready(function(){
     $(window).scroll(function(){
         // scroll navbar on scroll script
@@ -47,8 +54,7 @@ $(document).ready(function(){
     var text1 = "";
     var text2 = "";
 
-    setInterval(function(){
-
+    function updateGallery(){
         if (count == 3){
             count = 1;
         }else{
@@ -58,15 +64,15 @@ $(document).ready(function(){
         text1 = phrases[count - 1][1];
         text2 = phrases[count - 1][0];
 
-        console.log(text1);
-        console.log(text2);
-
         url = '../images/gallery_' + String(count);
 
         $('.gallery').css('background-image', 'url(' + url + '.jpg' + ')');
         $('.gallery-content .text-1').html(text1);
         $('.gallery-content .text-2').html(text2);
-    }, 4000);
+    }
+
+    var timeInterval = 4000;
+    var currentInterval = setInterval(updateGallery, timeInterval);
 
     // slide-up script
     $('.scroll-up').click(function(){
@@ -75,4 +81,34 @@ $(document).ready(function(){
         $('html').css('scrollBehaviour', 'auto');
     });
 
+    // gallery pictures arrows script
+    $('.gallery-content .left-arrow').click(function(){
+
+        // update the gallery
+
+        if (count - 1 == 0){
+            count = 2;
+        }else{
+            count -= 2;
+        }
+
+        updateGallery();
+
+        // clear and update the current interval
+        clearInterval(currentInterval);
+        currentInterval = setInterval(updateGallery, timeInterval);
+        
+    });
+
+     $('.gallery-content .right-arrow').click(function(){
+
+        updateGallery();
+
+        // clear and update the current interval
+        clearInterval(currentInterval);
+        currentInterval = setInterval(updateGallery, timeInterval);
+        
+    });
+
+  
 });

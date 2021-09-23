@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
 
+/* 
+   
+*/
+
+
+
 /* General styles */
 
 *,
@@ -18,7 +24,19 @@ html{
     font-family: 'Roboto', sans-serif;
 }
 
-/* Style the custom scroll-up button */
+.about, .gallery, .services, .contact{
+    width: 100%;
+    height: 650px;
+    margin-top: 100px;
+}
+
+.about, .services, .contact{
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+}
+
+/* Styling the custom scroll-up button */
 
 .scroll-up{
     position: fixed;
@@ -34,6 +52,7 @@ html{
     font-size: 20px;
     border: 1px solid white;
     border-radius: 6px;
+    box-shadow: 0px 0px 5px black;
     cursor: pointer;
     pointer-events: none;
     transition: all 1s ease;
@@ -47,13 +66,18 @@ html{
     pointer-events: auto;
 }
 
+.scroll-up:hover{
+    filter: brightness(70%);
+}
+
+
 /* Styling titles and sub-titles */
 
 section .title{
     position: relative;
     width: 100%;
-    height: 5%;
-    top: 15px;
+    height: 7%;
+    top: 0px;
     text-align: center;
     font-size: 40px;
     font-weight: 600;
@@ -63,15 +87,15 @@ section .title{
 section .sub-title{
     position: relative;
     width: 100%;
-    height: 5%;
+    height: 3%;
     text-align: center;
-    top: 20px;
     font-size: 20px;
     font-weight: 200;
+    font-style: italic;
     margin: 0;
 }
 
-/* Style the headings and sub-headings */
+/* Styling the headings and sub-headings */
 
 .text-1{
     width: 30%;
@@ -90,42 +114,34 @@ section .sub-title{
 /* Styling the navigation bar */
 
 .navbar{
+    position: fixed;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     width: 100%;
-    height: 75px;
+    padding: 40px;
     z-index: 999;
-    position: fixed;
-    padding-right: 50px;
-    margin: 0;
     transition: all 1s ease;
 }
 
 .navbar.sticky{
     background-color: black;
-    padding: 0 30px;
+    padding: 30px;
     height: 80px;
 }
 
-.menu{
-    width: 25%;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
 .menu li{
-    display: block;
-    float: left;
-    margin-left: 25px;
+    list-style: none;
+    display: inline-block;
 }
 
 .menu li a{
+    display: block;
     font-weight: bold;
     font-size: large;
     color: black;
     text-decoration: none;
+    margin-left: 20px;
     transition: color 1s ease;
 }
 
@@ -148,10 +164,19 @@ section .sub-title{
     transition: color 0.5s ease;
 }
 
+/* Menu button styling */
+
+.menu-btn{
+    display: none;
+    cursor: pointer;
+    font-size: 23px;
+}
+
 /* Styling the home section */
 .home{
-    background: url('../images/profile.jpg') no-repeat;
-    height: 750px;
+    width: 100%;
+    background: url('../images/profile.jpg') no-repeat center;
+    min-height: 750px;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -171,11 +196,6 @@ section .sub-title{
 }
 
 /* Styling the about section */
-
-.about{
-    width: 100%;
-    height: 700px;
-}
 
 .about-content{
     display: flex; 
@@ -216,20 +236,7 @@ section .sub-title{
 
 /* Styling the gallery section */
 
-.gallery::before{
-    content: "";
-    position: absolute;
-    transform: translateY(-100px);
-    width: 100%;
-    height: 100px;
-    background-color: black;
-    z-index: 1;
-}
-
 .gallery{
-    width: 100%;
-    height: 550px;
-    margin-top: 100px;
     background-image: url('../images/gallery_1.jpg');
     background-size: cover;
     transition: all 1s ease;
@@ -242,7 +249,6 @@ section .sub-title{
     justify-content: center;
     width: 100%;
     height: 100%;
-    border: 1px solid red;
 }
 
 .gallery-content .text-1{
@@ -261,29 +267,301 @@ section .sub-title{
     transition: all 1s ease;
 }
 
-.gallery-content i:first{
+.gallery-content .left-arrow{
+    position: absolute;
+    left: 30px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 36px;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px black;
 }
 
-.gallery-content:last-child{
-    
+.gallery-content .right-arrow{
+    position: absolute;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 36px;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px black;
 }
 
 /* Styling the services section */
 
+.services-content{
+    height: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.services-content .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 380px;
+    height: 360px;
+    border: 10px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px black;
+    transition: all 1s ease;
+}
+
+.services-content .card:hover{
+    box-shadow: 0px 0px 15px black;
+    background-color: lightgray;
+}
+
+.services-content .card span{
+    font-size: 100px;
+}
+
+.services-content .card .text-2{
+    height: 70px;
+    width: 200px;
+    line-height: 70px;  
+}
+
+.services-content .card .service-desc{
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    font-size: 26px;
+    padding-top: 5px;
+}
+
 
 /* Styling the contact section */
 
+.contact-content{
+    position: relative;
+    width: 100%;
+    height: 90%;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 70%;
+}
+
+/* Style the input-fields */
+
+.fields{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 30%;
+}
+
+.field{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 50%;
+    margin-bottom: 5px;
+}
+
+.field label{
+    width: 100%;
+    height: 50%;
+}
+
+.field input{
+    width: 100%;
+    height: 50%;
+    font-size: 18px;
+    font-weight: 200;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
+    transition: all 1s ease;
+}
+
+.field input:focus{
+    border-bottom: 3px solid black;
+}
+
+/* Style the message-area */
+
+.text-area{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 40%;
+    margin-top: 10px;
+}
+
+.text-area label{
+    width: 100%;
+    height: 20%;
+}
+
+.text-area textarea{
+    width: 100%;
+    height: 80%;
+    font-family: 'Roboto';
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
+    resize: none;
+    transition: all 1s ease;
+}
+
+.text-area textarea:focus{
+    border-bottom: 3px solid black;
+}
+
+/* Style the send-button */
+
+.contact-form .send-button{
+    position: relative;
+    width: 100%;
+    height: 30%;
+    padding: 30px;      
+}
+
+.send-button.clicked{
+    padding: 30px;
+}
+
+.send-button button{
+    position: absolute;
+    background-color: transparent;
+    font-family: 'Roboto';
+    border: 1px solid black;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 50%;
+}
+
+.send-button button:hover{
+    box-shadow: 0px 0px 5px black;
+}
+
+.send-button button:focus{
+    background-color: lightgray;
+    font-size: smaller;
+}
 
 /* Style the footer */
 
 footer{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
     background-color: black;
     color: white;
+    width: 100%;
+    height: 175px;
+}
+
+footer .links{
+    position: relative;
+    width: 30%;
+    height: 30%;
+    text-align: center;
+}
+
+.links a{
+    font-size: 48px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    margin: 3px;
+}  
+
+.links a:hover{
+    color: lightgray;
+}
+
+footer span{
+    text-align: center;
+    padding-top: 15px;
+    width: 30%;
+    height: 30%;
+}
+
+footer span a{
+    text-decoration: none;
+}
+
+/* Responsive settings */
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (max-width: 1200px) {
+    .navbar{
+        border: 1px solid black;
+    }
+
+    .menu{
+        border: 1px solid red;
+    }
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (max-width: 992px) {
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (max-width: 768px) {
+
+}
+
+
+/* Small devices (portrait tablets and large phones, 576px and up) */
+@media (max-width: 576px) {
+    
 }
 
 
 
 
+/* Small devices (portrait tablets and large phones, 576px and up) */
+@media (min-width: 576px) {
+    
 
+}
 
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) {
 
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) {
+    
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    
+}

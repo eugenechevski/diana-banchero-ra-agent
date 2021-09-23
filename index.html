@@ -3,41 +3,46 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Real Estate Associate Diana Banchero</title>
+        <title>Real Estate Agent Diana Banchero</title>
 
         <!--custom stylesheet-->
         <link rel="stylesheet" href="./styles/style.css">
 
-        <!--google fonts-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;   300&display=swap" rel="stylesheet">
-
-        <!--icon style link-->
+        <!--font awesome icons-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+
+        <!--google material icons-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         
         <!--jquery cdn-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
     </head>
     <body>
+
+        <!--
+            TODO:
+                1. Add a favicon;
+        -->
 
         <!--custom scroll-->
         <div class="scroll-up">
             <i class="fas fa-arrow-up"></i>
         </div>
 
-        <!--navigation bar start-->
+        <!--navigation bar-->
         <nav class="navbar">
             <ul class="menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
-            </ul>    
+            </ul> 
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
         </nav>
         
-        <!--home section start-->
+        <!--home section-->
         <section class="home" id="home">
             <div class="home-content">
                 <div class="text-1">Diana Banchero</div>
@@ -45,7 +50,7 @@
             </div>     
         </section>
 
-        <!--about section start-->
+        <!--about section-->
         <section class="about" id="about">
             <h1 class="title">About me</h1>
             <h2 class="sub-title">Who I am</h2>
@@ -62,43 +67,41 @@
                 </div>
         </section>
 
-        <!--gallery section start-->
+        <!--gallery section-->
         <section class="gallery" id="gallery">
             <div class="gallery-content">
-                <i class="fas fa-long-arrow-alt-left"></i>
+                <div class="left-arrow">
+                    <i class="fas fa-long-arrow-alt-left"></i>
+                </div>
                 <div class="text-2">Embrace</div>
                 <div class="text-1">Your Passion</div>
-                <i class="fas fa-long-arrow-alt-right"></i>
+                <div class="right-arrow">
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
             </div>
         </section>
 
-        <!--my services section start-->
+        <!--my services section-->
         <section class="services" id="services">
                 <h1 class="title">My services</h1>
                 <h2 class="sub-title">Experience You Can Trust</h2>
                 <div class="services-content">
                     <div class="card">
-                        <div class="box">
-                            <img src="./images/search.png" alt="">
-                            <div class="text-2">Rental Search</div>
-                            <p>Assistance finding and moving to a new home.</p>
-                        </div>
+                        <span class="material-icons">search</span>
+                        <div class="text-2">Rental Search</div>
+                        <p class="service-desc">Assistance finding and moving to a new home.</p>
                     </div>
 
                     <div class="card">
-                        <div class="box">
-                            <img src="./images/buy_and_sell.png" alt="">
-                            <div class="text-2">Buying & Selling</div>
-                            <p>Assistance buying a property, also assistance marketing and selling a property.</p>
-                        </div>
+                        <span class="material-icons">real_estate_agent</span>
+                        <div class="text-2">Buying & Selling</div>
+                        <p class="service-desc">Assistance buying a property, also assistance marketing and selling a property.</p>
                     </div>
 
                     <div class="card">
-                        <div class="box">
-                            <img src="./images/consultation.png" alt="">
-                            <div class="text-2">Free Consultation</div>
-                            <p>Answering all question and giving a personalized and professional opinion.</p>
-                        </div>
+                        <span class="material-icons">question_answer</span>
+                        <div class="text-2">Consultation</div>
+                        <p class="service-desc">Answering all question and giving a personalized and professional opinion.</p>
                     </div>
                 </div>
         </section>
@@ -108,43 +111,43 @@
             <h1 class="title">Contact me</h1>
             <h2 class="sub-title">Email: jmetelka66@gmail.com / Tel: +1 (305) 879-4649</h2>
                 <div class="contact-content">
-                    <form action="#">
+                    <form class="contact-form" action="#">
                         <div class="fields">
-                            <div class="field first_name">
-                                <label for="first_name">First Name</label>
-                                <input type="text" name="first_name" id="" placeholder="" required>
+                            <div class="field">
+                                <label for="first-name">First Name</label>
+                                <input style="width: 90%;" type="text" name="first-name" id="" maxlength="32" placeholder="" required>
                             </div>
-                            <div class="field last_name">
-                                <label for="last_name">Last Name</label>
-                                <input type="text" name="last_name" id="" placeholder="" required>
+                            <div class="field">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" name="" id="" maxlength="45" placeholder="" required>
                             </div>
-                            <div class="field email">
+                            <div class="field" style="width: 100%;">
                                 <label for="email">Email*</label>
-                                <input type="email" name="email" id="" placeholder="Email" required>
+                                <input type="email" name="email" id="" placeholder="" required>
                             </div>
                         </div>
-                        <div class="field textarea">
+                        <div class="text-area">
                             <label for="message">Message</label>
-                            <textarea name="message" id="" cols="30" rows="10" placeholder="" required></textarea>
+                            <textarea name="message" id="" cols="30" rows="10" maxlength="700" placeholder="" required></textarea>
                         </div>
-                        <div class="button-area">
-                            <button type="submit">SEND</button>
+                        <div class="send-button">
+                            <button type="submit">Send</button>
                         </div>
                     </form>
                 </div>
         </section>
 
-        <!--footer start-->
+        <!--footer-->
         <footer>
             <div class="links">
-                <a href="">
-                    <img src="images/facebook.png" alt="">
+                <a href="https://www.facebook.com/diana.khvashcheuskaya" style="position: relative;top: -2px;font-size: 41px;">
+                    <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="">
-                    <img src="images/instagram.png" alt="">
+                <a href="https://www.instagram.com/diana_realtormia/">
+                    <i class="fab fa-instagram"></i>
                 </a>
             </div>
-            <span>Created by <a href="mailto:yauhenikh7@gmail.com">Yauheni Khvashcheuski</a> &#169; 2021</span>
+            <span>All rights reserved &#169; 2021</span>
         </footer>
         
         <script src="./scripts/script.js"></script>
