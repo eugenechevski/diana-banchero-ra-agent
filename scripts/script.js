@@ -1,44 +1,27 @@
 /* 
     TODO:
-        1. Fix the scroll y-coodridinates;
         2. Form validation;
 */
 
 
 $(document).ready(function(){
     $(window).scroll(function(){
+
         // scroll navbar on scroll script
         if (this.scrollY > 20){
             $('.navbar').addClass("sticky");
+            $('.menu-btn').addClass('sticky');
         }else{
             $('.navbar').removeClass("sticky");
+            $('.menu-btn').removeClass("sticky");
+
+            $('.navbar').removeClass('active');
+            $('.navbar .menu').removeClass('active');
+            $('.menu-btn i').removeClass('active');
         }
         
-        // active link in the navigation bar
-
-        // about section
-        if (this.scrollY > 650 && this.scrollY < 1350){
-            $("a[href='#about']").addClass("active");
-        }else{
-            $("a[href='#about']").removeClass("active");
-        }
-
-        // serices section
-        if (this.scrollY > 1350 && this.scrollY < 1750){
-            $("a[href='#services']").addClass("active");
-        }else{
-            $("a[href='#services']").removeClass("active");
-        }
-
-        // contact section
-        if (this.scrollY > 1750 && this.scrollY < 2250){
-            $("a[href='#contact']").addClass("active");
-        }else{
-            $("a[href='#contact']").removeClass("active");
-        }
-
         // scroll-up button show/hide script
-        if (this.scrollY > 650){
+        if (this.scrollY > 300){
             $('.scroll-up').addClass('show');
         }else{
             $('.scroll-up').removeClass('show');
@@ -81,4 +64,10 @@ $(document).ready(function(){
         $('html').css('scrollBehaviour', 'auto');
     });
 
+    // toggle menu/navbar script
+    $('.menu-btn, .menu li a').click(function(){
+        $('.navbar').toggleClass('active');
+        $('.navbar .menu').toggleClass('active');
+        $('.menu-btn i').toggleClass('active');
+    });
 });

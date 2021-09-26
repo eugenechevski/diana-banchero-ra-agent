@@ -137,15 +137,15 @@ section .sub-title{
     justify-content: flex-end;
     align-items: center;
     width: 100%;
-    padding: 40px;
-    z-index: 999;
+    padding: 3%;
+    z-index: 998;
     transition: all 1s ease;
 }
 
 .navbar.sticky{
     background-color: black;
-    padding: 30px;
-    height: 80px;
+    padding: 2%;
+    height: 10vh;
 }
 
 .menu li{
@@ -159,7 +159,7 @@ section .sub-title{
     font-size: large;
     color: black;
     text-decoration: none;
-    margin-left: 20px;
+    margin-left: 1.5vw;
     transition: color 1s ease;
 }
 
@@ -176,18 +176,14 @@ section .sub-title{
     color: #777777 !important;
 }
 
-.navbar.sticky .menu li a.active{
-    color: #bfbfbf;
-    text-shadow: 0.5px 0.5px 10px white;
-    transition: color 0.5s ease;
-}
-
 /* Menu button styling */
 
 .menu-btn{
-    display: none;
     cursor: pointer;
-    font-size: 23px;
+    font-size: x-large;
+    color: black;
+    display: none;
+    transition: all 0.3s ease;
 }
 
 /* Styling the home section */
@@ -284,7 +280,6 @@ section .sub-title{
 .services-content{
     height: 80%;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -528,7 +523,12 @@ footer span a{
         --fs-h2: 1.25rem;
         --fs-p1: 1.25rem;
         --fs-p2: 1.10rem;
+        --is-2: 2.25rem;
 
+    }
+
+    .links .facebook{
+        font-size: calc(var(--is-2) - 0.6vh);
     }
 
 }
@@ -542,7 +542,7 @@ footer span a{
         --fs-body: 0.85rem;  
         --fs-title: 2rem;
         --is-1: 4rem;
-        --is-2: 2rem;
+        --is-2: 1.7rem;
         
     }
 }
@@ -556,9 +556,55 @@ footer span a{
         --fs-p1: 0.75rem;
         --fs-p2: 0.55rem;
         --fs-title: 1.75rem;
-        --fs-sub-title: 1rem;
+        --fs-sub-title: 0.75rem;
         --is-1: 3rem;
-        --is-2: 1.75rem;
+        --is-2: 1.65rem;
+    }
+
+    .menu-btn.sticky{
+        display: block;
+        position: fixed;
+        z-index: 999;
+        top: 3%;
+        right: 4%;
+        color: white;
+    }
+
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+
+    .navbar{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar.active{
+        height: 100vh;
+        
+    }
+    
+    .menu{
+        display: none;
+    }
+
+    .navbar .menu.active{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .menu li{
+        width: 100%;
+        height: 12.5%;
+        text-align: center;
+    }
+    
+    .menu li a{
+        font-size: x-large;
     }
 
     .home{
@@ -597,17 +643,22 @@ footer span a{
     .services-content .card{
         flex: 1;
         margin-bottom: 2.5%;
+        margin-left: 0;
     }
 
     .services-content .text-2{
         font-size: 0.75rem;
     }
 
+    .links .facebook{
+        font-size: calc(var(--is-2) - 0.75vh);
+    }
+
 
 }
 
-/* Extra small devices(small phones, 350px and up) */
-@media (max-width: 350px){
+/* Extra small devices(small phones, 428px and up) */
+@media (max-width: 428px){
     :root{
         --fs-h1: 1.5rem;
         --fs-h2: 0.75rem;
@@ -667,7 +718,9 @@ footer span a{
         font-size: medium;
     }
 
-    
+    .links .facebook{
+        font-size: calc(var(--is-2) - 0.6vh);
+    }    
     
 }
 
