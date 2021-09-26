@@ -81,33 +81,4 @@ $(document).ready(function(){
         $('html').css('scrollBehaviour', 'auto');
     });
 
-    // gallery pictures arrows script
-    $('.gallery-content .left-arrow').click(function(){
-
-        // update the gallery
-
-        if (count - 1 == 0){
-            count = 2;
-        }else{
-            count -= 2;
-        }
-
-        updateGallery();
-
-        // clear and update the current interval
-        clearInterval(currentInterval);
-        currentInterval = setInterval(updateGallery, timeInterval);
-        
-    });
-
-     $('.gallery-content .right-arrow').click(function(){
-
-        updateGallery();
-
-        // clear and update the current interval
-        clearInterval(currentInterval);
-        currentInterval = setInterval(updateGallery, timeInterval);
-        
-    });
-
 });
