@@ -1,12 +1,5 @@
-/* 
-    TODO:
-        2. Form validation;
-*/
-
-
 $(document).ready(function(){
     $(window).scroll(function(){
-
         // scroll navbar on scroll script
         if (this.scrollY > 20){
             $('.navbar').addClass("sticky");
@@ -21,14 +14,14 @@ $(document).ready(function(){
         }
         
         // scroll-up button show/hide script
-        if (this.scrollY > 300){
+        if (this.scrollY > 200){
             $('.scroll-up').addClass('show');
         }else{
             $('.scroll-up').removeClass('show');
         }
     });
 
-    // animate the gallery section with changing the background image
+    // animate the gallery section by changing the background image
     
     var count = 1;
     var url = "";
@@ -47,7 +40,7 @@ $(document).ready(function(){
         text1 = phrases[count - 1][1];
         text2 = phrases[count - 1][0];
 
-        url = '../images/gallery_' + String(count);
+        url = '../images/' + '0' + String(count) + '-gallery'; 
 
         $('.gallery').css('background-image', 'url(' + url + '.jpg' + ')');
         $('.gallery-content .text-1').html(text1);
@@ -62,6 +55,11 @@ $(document).ready(function(){
         $('html').animate({scrollTop: 0});
         // removing smooth scroll on slide-up button click
         $('html').css('scrollBehaviour', 'auto');
+    });
+
+    $('.navbar .menu li a').click(function(){
+        // applying again smooth scroll on menu items click
+        $('html').css("scrollBehavior", "smooth");
     });
 
     // toggle menu/navbar script

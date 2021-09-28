@@ -95,7 +95,7 @@ section .sub-title{
     flex-flow: column wrap;
 }
 
-/* Styling the custom scroll-up button */
+/* Style the scroll-up button */
 
 .scroll-up{
     position: fixed;
@@ -129,7 +129,7 @@ section .sub-title{
     filter: brightness(70%);
 }
 
-/* Styling the navigation bar */
+/* Style the navigation bar */
 
 .navbar{
     position: fixed;
@@ -176,7 +176,7 @@ section .sub-title{
     color: #777777 !important;
 }
 
-/* Menu button styling */
+/* Style the menu button */
 
 .menu-btn{
     cursor: pointer;
@@ -186,7 +186,8 @@ section .sub-title{
     transition: all 0.3s ease;
 }
 
-/* Styling the home section */
+/* Style the home section */
+
 .home{
     width: 100%;
     background: url('../images/profile.jpg') no-repeat center;
@@ -204,7 +205,7 @@ section .sub-title{
     padding-left: 15%;
 }
 
-/* Styling the about section */
+/* Style the about section */
 
 .about-content{
     display: flex; 
@@ -240,10 +241,10 @@ section .sub-title{
     text-align: justify;
 }
 
-/* Styling the gallery section */
+/* Style the gallery section */
 
 .gallery{
-    background: url('../images/gallery_1.jpg') no-repeat center;
+    background: url('../images/01-gallery.jpg') no-repeat center;
     background-size: auto;
     transition: all 1s ease;
 }
@@ -275,7 +276,7 @@ section .sub-title{
     transition: all 1s ease;
 }
 
-/* Styling the services section */
+/* Style the services section */
 
 .services-content{
     height: 80%;
@@ -321,8 +322,7 @@ section .sub-title{
     padding: 5%;
 }
 
-
-/* Styling the contact section */
+/* Style the contact section */
 
 .contact-content{
     position: relative;
@@ -343,7 +343,7 @@ section .sub-title{
     height: 70%;
 }
 
-/* Style the input-fields */
+/* Style the input fields */
 
 .fields{
     display: flex;
@@ -380,7 +380,7 @@ section .sub-title{
     border-bottom: 3px solid black;
 }
 
-/* Style the message-area */
+/* Style the message area */
 
 .text-area{
     display: flex;
@@ -547,8 +547,7 @@ footer span a{
     }
 }
 
-
-/* Small devices (portrait tablets and large phones, 576px and up) */
+/* Small devices (portrait tablets, 576px and up) */
 @media (max-width: 576px) {
     :root{
         --fs-h1: 2.5rem;
@@ -608,7 +607,7 @@ footer span a{
     }
 
     .home{
-        background: url('../images/home_sm.jpg') center no-repeat;
+        background: url('../images/home-sm.jpg') center no-repeat;
         background-size: cover;
         background-attachment: fixed;
     }
@@ -630,7 +629,7 @@ footer span a{
     }
 
     .about-content .column-left img{
-        content: url('../images/about_sm.jpeg');
+        content: url('../images/about-sm.jpeg');
         
     }
 
@@ -665,7 +664,7 @@ footer span a{
 
 }
 
-/* Extra small devices(small phones, 428px and up) */
+/* Extra small devices(Large and small phones, 428px and up) */
 @media (max-width: 428px){
     :root{
         --fs-h1: 1.5rem;
@@ -726,6 +725,5 @@ footer span a{
     }    
     
 }
-
 
 

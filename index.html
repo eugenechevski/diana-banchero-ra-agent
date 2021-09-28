@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--Created by Yauheni Khvashcheuski-->
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -19,12 +20,13 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
+        <!--custom javascript-->
+        <script src="./scripts/script.js"></script>
 
         <!--scroll up arrow-->
         <div class="scroll-up">
             <i class="fas fa-arrow-up"></i>
         </div>
-
 
         <!--hamburger dropdown-->
         <div class="menu-btn">
@@ -55,7 +57,7 @@
             <h2 class="sub-title">Who I am</h2>
                 <div class="about-content">
                     <div class="column-left">
-                        <img src="./images/about_lg.jpg" alt="">
+                        <img src="./images/about-lg.jpg" alt="">
                     </div>
                     <div class="column-right">
                         <p>With unparalleled industry knowledge, experience, and local expertise, 
@@ -104,7 +106,7 @@
             <h1 class="title">Contact me</h1>
             <h2 class="sub-title">Email: jmetelka66@gmail.com / Tel: +1 (305) 879-4649</h2>
                 <div class="contact-content">
-                    <form class="contact-form" action="#">
+                    <form class="contact-form" name="contact" method="POST" data-netlify="true">
                         <div class="fields">
                             <div class="field">
                                 <label for="first-name">First Name</label>
@@ -142,8 +144,5 @@
             </div>
             <span>All rights reserved &#169; 2021</span>
         </footer>
-        
-        <script src="./scripts/script.js"></script>
-
     </body>
 </html>
